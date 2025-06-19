@@ -1,0 +1,370 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Using Google Font */
+    background-color: #f0f4f8; /* Softer, light grey-blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Reduced padding for smaller screens */
+    box-sizing: border-box;
+    color: #333;
+    animation: fadeIn 1s ease-out; /* Page load animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px; /* Adjusted padding */
+    border-radius: 12px; /* Slightly less rounded */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Refined shadow */
+    width: 100%;
+    max-width: 768px; /* Optimized max-width for common devices */
+    text-align: center;
+    margin: 20px auto; /* Adjusted margin */
+    border: 1px solid #e2e8f0; /* Subtle border */
+}
+
+/* Titles and Taglines */
+.app-title {
+    color: #2c3e50; /* Darker, more professional tone */
+    margin-bottom: 10px;
+    font-size: 2.5em; /* Slightly smaller for better fit */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    color: #7f8c8d; /* Muted grey */
+    margin-bottom: 25px; /* Reduced margin */
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Card Styles (for sections) */
+.card {
+    background-color: #fdfdfe; /* Almost white for cards */
+    padding: 20px; /* Adjusted padding */
+    margin-bottom: 20px; /* Adjusted margin */
+    border-radius: 10px;
+    border: 1px solid #edf2f7; /* Very light border */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04); /* Very subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Softer transition */
+}
+
+/* Input Labels */
+.input-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568; /* Darker blue-grey */
+    font-weight: 600;
+    text-align: left;
+    font-size: 0.95em; /* Slightly smaller */
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    background-color: #3498db; /* Professional blue */
+    color: white;
+    padding: 10px 18px; /* Adjusted padding */
+    border-radius: 6px; /* Slightly less rounded */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95em; /* Adjusted font size */
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Softer transition */
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3); /* Softer shadow */
+}
+
+.custom-file-upload:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+}
+
+.custom-file-upload .icon {
+    margin-right: 8px; /* Reduced margin */
+    font-size: 1.1em;
+}
+
+.file-name-display {
+    margin-top: 10px; /* Reduced margin */
+    font-style: italic;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+/* Select and Textarea Styles */
+.styled-select, .styled-textarea {
+    width: 100%;
+    padding: 10px 12px; /* Adjusted padding */
+    margin-top: 5px;
+    border: 1px solid #cbd5e0; /* Softer border */
+    border-radius: 6px;
+    font-size: 0.95em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23718096%22%20d%3D%22M287%2C197.4L146.2%2C56.6L5.4%2C197.4h281.6z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%; /* Adjusted position */
+    background-size: 10px auto; /* Adjusted size */
+}
+
+.styled-select:focus, .styled-textarea:focus {
+    border-color: #38b2ac; /* More subtle teal */
+    box-shadow: 0 0 0 2px rgba(56, 178, 172, 0.2); /* Softer glow */
+    outline: none;
+}
+
+.styled-textarea {
+    min-height: 120px; /* Slightly smaller default height */
+    resize: vertical;
+}
+
+/* Minimal Button Style (Analyze Button) */
+.styled-button {
+    background-color: #38b2ac; /* Teal button */
+    color: white;
+    padding: 10px 25px; /* Optimized padding for minimal look */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em; /* Standard font size */
+    font-weight: 600;
+    margin-top: 20px; /* Adjusted margin */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(56, 178, 172, 0.2); /* Subtle shadow */
+    outline: none;
+}
+
+.styled-button:hover:not(:disabled) {
+    background-color: #319795; /* Darker teal on hover */
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 4px 12px rgba(56, 178, 172, 0.3);
+}
+
+.styled-button:disabled {
+    background-color: #cbd5e0; /* Grey out when disabled */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Analysis Result Section */
+.analysis-title {
+    color: #2c3e50;
+    margin-top: 25px; /* Adjusted margin */
+    margin-bottom: 15px;
+    font-size: 1.8em; /* Slightly smaller */
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0; /* Lighter border */
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.analysis-content {
+    background-color: #ecfdf5; /* Very light mint green */
+    border: 1px solid #a7e0c4; /* Soft green border */
+    border-radius: 8px;
+    padding: 20px; /* Adjusted padding */
+    text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.5; /* Good readability */
+    font-size: 0.95em; /* Slightly smaller text */
+    color: #2d3748; /* Darker, clear text */
+}
+
+.analysis-content p {
+    margin-bottom: 8px; /* Reduced spacing */
+}
+
+/* Spinner Styles */
+.spinner {
+    border: 4px solid rgba(56, 178, 172, 0.2); /* Light teal */
+    border-top-color: #38b2ac; /* Solid teal */
+    width: 30px; /* Smaller spinner */
+    height: 30px;
+    border-radius: 50%;
+    animation: spin 0.7s ease-in-out infinite; /* Faster spin */
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #e53e3e; /* Clear red */
+    background-color: #fff5f5; /* Very light red background */
+    border: 1px solid #fed7d7; /* Red border */
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 500;
+    animation: slideIn 0.4s ease-out; /* Slightly faster animation */
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Download Section Styles */
+.download-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out; /* Fade in when visible */
+}
+
+.download-label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.download-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.download-button i {
+    font-size: 1.2em; /* Icon size */
+}
+
+.pdf-button {
+    background-color: #e74c3c; /* Red for PDF */
+    color: white;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.2);
+}
+
+.pdf-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.png-button {
+    background-color: #27ae60; /* Green for PNG */
+    color: white;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+.png-button:hover {
+    background-color: #229a56; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+
+/* Responsive adjustments for all devices */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px;
+        margin: 15px auto;
+        border-radius: 8px; /* More rounded for mobile */
+    }
+    .app-title {
+        font-size: 2em;
+    }
+    .tagline {
+        font-size: 0.9em;
+    }
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+    .custom-file-upload, .styled-button, .download-button { /* Apply minimal button style to download buttons too */
+        padding: 8px 15px;
+        font-size: 0.9em;
+        border-radius: 5px;
+    }
+    .custom-file-upload .icon, .download-button i {
+        font-size: 1em;
+    }
+    .styled-select, .styled-textarea {
+        padding: 8px 10px;
+        font-size: 0.9em;
+        border-radius: 5px;
+    }
+    .styled-textarea {
+        min-height: 100px; /* Smaller height for mobile */
+    }
+    .analysis-title {
+        font-size: 1.5em;
+    }
+    .analysis-content {
+        padding: 15px;
+        font-size: 0.9em;
+        border-radius: 8px;
+    }
+    .spinner {
+        width: 25px;
+        height: 25px;
+    }
+    .download-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+    }
+}
+
+/* Further adjustments for very small mobile devices (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    .app-title {
+        font-size: 1.8em;
+    }
+    .tagline {
+        font-size: 0.85em;
+    }
+    .custom-file-upload, .styled-button, .download-button {
+        padding: 7px 12px;
+        font-size: 0.85em;
+    }
+    .styled-select, .styled-textarea {
+        font-size: 0.85em;
+    }
+    .analysis-title {
+        font-size: 1.3em;
+    }
+}
